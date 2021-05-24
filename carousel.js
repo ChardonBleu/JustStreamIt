@@ -1,7 +1,10 @@
 /*jslint es6*/
+/*global document window*/
+
+"use strict";
+
 
 function activeSlide(carousel) {
-    "use strict";
 
     var slider = carousel.getElementsByClassName('carousel__slider')[0],
     items = carousel.getElementsByClassName('carousel__slider__item'),
@@ -11,24 +14,18 @@ function activeSlide(carousel) {
     var width, height, totalWidth, margin = 20,
         currIndex = 0;
 
-    function init() {
-        resize();
-        move(1);
-        bindEvents();
-    }
-
     function resize() {
         width = Math.max(window.innerWidth * 0.2, 300);
-        height = window.innerHeight * 0.2;
+        height = width / 1.6;
         totalWidth = width * items.length;
 
         slider.style.width = totalWidth + "px";
 
-        for (var i = 0; i < items.length; i++) {
-            let item = items[i];
+        for (const item of items) {
             item.style.width = (width - (margin * 2)) + "px";
             item.style.height = height + "px";
         }
+
     }
 
     function move(index) {
@@ -54,6 +51,12 @@ function activeSlide(carousel) {
         window.addEventListener("resize", resize);
         prevBtn.addEventListener('click', prev);
         nextBtn.addEventListener('click', next);
+    }
+
+    function init() {
+        resize();
+        move(1);
+        bindEvents();
     }
 
     init();

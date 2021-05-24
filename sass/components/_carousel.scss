@@ -42,8 +42,7 @@ html > .carousel, body > .carousel {
         display: flex;
         transition: transform 1s ease-in-out;
         &__item {
-            margin-left: 20px;
-            margin-right: 20px;
+            margin:auto;
             height: 100%;
             text-align: center;
             border-color: $box-border;
@@ -51,7 +50,7 @@ html > .carousel, body > .carousel {
             border-width: 3px;
             border-style: solid;
             & h1 {
-                font-size: 7em;
+                font-size: 5em;
                 width: 100%;
                 color: $box-border;
             }
