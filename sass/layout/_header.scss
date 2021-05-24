@@ -8,9 +8,13 @@
     justify-content: space-between;
     width: 100%;
     background-color: $body-light;
-    &__logo {
+    &__title {
         font-size: 5rem;
+        flex: 2;
         color: $text-hover;
         margin-left: 50px;
+    }
+    &__logo img{
+        width: 200px;
     }
 }

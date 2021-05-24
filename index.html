@@ -9,28 +9,66 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__logo">JustStreamIt</div>
-      <nav class="nav">
-          <div class="nav__link"><a>Accueil</a></div>
-          <div class="nav__link"><a>Catégories</a></div>
-      </nav>
 
-    </header>    
-
-    <article class="best">
-      <img  class="best__img" src="..\photos\05_gettyimages-175738761_super_resized.jpg" alt="Don Quichote"/>
-      <div class="best__details">
-         description of the best
-      </div>
-
-    </article> 
-    
     <div id="myModal" class="modal">
       <span class="modal__close" >&times;</span>
       <div class="modal__content">
           <div class="modal_content modal__content__img"><img class="modal__content__img" id="modalImg"></div>
-          <div class="modal_content modal__content__text">description</div>
+          <div class="modal_content modal__content__text">image pochette, Titre film, genre complet du film, 
+            date de sortie, rated, score imdb, réalisateur, liste acteurs, durée, pays origine, 
+            résultats box office, résumé film</div>
+      </div>
+    </div>
+
+    <header class="header">      
+      <div class="header__logo"><img src="logo_light.png" /></div>
+      <div class="header__title">JustStreamIt</div>
+      <nav class="nav">
+          <div class="nav__link"><a>Accueil</a></div>
+          <div class="nav__link"><a>Catégories</a></div>
+      </nav>
+    </header>
+
+    <article class="best">
+      <img  class="best__img" src="..\photos\05_gettyimages-175738761_super_resized.jpg" alt="Don Quichote"/>
+      <div class="best__details">
+        photo, titre, bouton(more info --> fenêtre modale), résumé sous le bouton
+      </div>
+    </article>   
+
+    <div class="carousel" id="carousel0"><p>Films les mieux notés</p>
+      <div class="carousel__slider">
+        <div class="carousel__slider__item">
+          <img src="..\photos\05_gettyimages-175738761_super_resized.jpg" alt="Don Quichote" onclick="fonctionModale(this);" />  
+        </div>
+  
+        <div class="carousel__slider__item">
+          <h1>2</h1>
+        </div> 
+  
+        <div class="carousel__slider__item">
+          <h1>3</h1>
+        </div>
+  
+        <div class="carousel__slider__item">
+          <h1>4</h1>
+        </div>
+  
+        <div class="carousel__slider__item">
+          <h1>5</h1>
+        </div>
+  
+        <div class="carousel__slider__item">
+          <h1>6</h1>
+        </div>
+  
+        <div class="carousel__slider__item">
+          <h1>7</h1>
+        </div>
+      </div>
+      <div class="carousel__nav">
+        <div class="carousel__nav__prev"><h1><</h1></div>
+        <div class="carousel__nav__next"><h1>></h1></div>
       </div>
     </div>
     

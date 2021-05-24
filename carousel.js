@@ -62,6 +62,8 @@ function activeSlide(carousel) {
     init();
 
 }
+var carousel1 = document.getElementById('carousel0');
+activeSlide(carousel0);
 
 var carousel1 = document.getElementById('carousel1');
 activeSlide(carousel1);
