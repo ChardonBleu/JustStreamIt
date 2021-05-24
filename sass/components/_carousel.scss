@@ -9,6 +9,8 @@ html > .carousel, body > .carousel {
     margin: auto;
     overflow: hidden;
     margin-bottom: 50px;
+    z-index: 1000;
+    
     > p {
         font-size: 1.5em;
         font-weight: bold;

@@ -1,13 +1,15 @@
 .header {
+    z-index: 100;
     position: fixed;
     top : 0px;
     left: 0px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     background-color: $body-light;
     &__logo {
-        font-size: 7rem;
+        font-size: 5rem;
         color: $text-hover;
         margin-left: 50px;
     }

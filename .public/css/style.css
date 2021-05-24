@@ -11,28 +11,29 @@ html *, body * {
 }
 
 .header {
+  z-index: 100;
   position: fixed;
   top: 0px;
   left: 0px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   background-color: #f8f8f8;
 }
 .header__logo {
-  font-size: 7rem;
+  font-size: 5rem;
   color: #115a79;
   margin-left: 50px;
 }
 
 .nav {
   padding-right: 50px;
-  flex: 2 1 auto;
   text-align: right;
 }
 .nav__link {
   display: inline;
-  font-size: 3rem;
+  font-size: 2rem;
   padding-left: 1.5rem;
 }
 .nav__link a {
@@ -65,6 +66,7 @@ html > .carousel, body > .carousel {
   margin: auto;
   overflow: hidden;
   margin-bottom: 50px;
+  z-index: 1000;
 }
 .carousel > p {
   font-size: 1.5em;
