@@ -12,16 +12,24 @@
         <nav class="nav"> 
 
         </nav>
-    </header>
+    </header>    
 
     <article class="best">
 
     </article> 
     
+    <div id="myModal" class="modal">
+      <span class="modal__close" onclick="modalClose(this);">&times;</span>
+      <div class="modal__content">
+          <div class="modal_content modal__content__img"><img class="modal__content__img" id="modalImg"></div>
+          <div class="modal_content modal__content__text">description</div>
+      </div>
+    </div>
+    
     <div class="carousel" id="carousel1"><p>Catégorie 1</p>
       <div class="carousel__slider">
         <div class="carousel__slider__item">
-          <h1>1</h1> 
+          <img src="..\photos\05_gettyimages-175738761_super_resized.jpg" alt="Don Quichote" onclick="fonctionModale(this);" />  
         </div>
   
         <div class="carousel__slider__item">
@@ -53,6 +61,7 @@
         <div class="carousel__nav__next"><h1>></h1></div>
       </div>
     </div>
+
     <div class="carousel" id="carousel2"><p>Catégorie 2</p>
       <div class="carousel__slider">
         <div class="carousel__slider__item">
@@ -128,6 +137,7 @@
   
   
   <script  src="carousel.js"></script>
+  <script  src="modal.js"></script>
 
   </body>
 
