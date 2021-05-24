@@ -1,0 +1,65 @@
+html > .carousel, body > .carousel {
+    padding-top: 0px;
+  }
+
+.carousel {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+    > p {
+        font-size: 1.5em;
+        font-weight: bold;
+        width: 100%;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $text;
+        user-select: none;
+    }
+    &__nav {  
+        display:flex;
+        justify-content: center;
+        &__prev h1, &__next h1 {
+            width: 300px;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 80px;
+            font-weight: bold;
+            color: $box-border;
+            cursor: pointer;
+            transition: transform 0.25s ease;
+            &:hover {
+                color: $text-hover;
+                transform: scale(1.25);
+            }
+        }
+    }
+    &__slider {
+        display: flex;
+        transition: transform 1s ease-in-out;
+        &__item {
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 100%;
+            text-align: center;
+            border-color: $box-border;
+            background: $box-bg;
+            border-width: 3px;
+            border-style: solid;
+            & h1 {
+                font-size: 7em;
+                width: 100%;
+                color: $box-border;
+            }
+            & img {
+                width: 100%;
+                height: 100%;
+                margin: auto
+            }
+        }
+    }
+}
