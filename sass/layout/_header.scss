@@ -1,13 +1,13 @@
 .header {
+    position:sticky;
+    top:0px;
     z-index: 100;
-    position: fixed;
-    top : 0px;
-    left: 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     background-color: $body-light;
+
     &__title {
         font-size: 5rem;
         flex: 2;

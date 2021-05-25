@@ -1,14 +1,33 @@
 .best {
-    padding-top: 200px;
     display: flex;
     margin:auto;
     align-items: center;
-    width: 80%;
+    position: relative;
+    top: 20px;
+    margin-bottom: 40px;
+    width: 70%;
+    background-color: $box-bg;
+   
     &__img {
-        width: 30%;
-        height: auto;
+        width: 15%;
     }
-    &__details{
+    &__details{ 
+        padding-left: 20px;
+        background-color: $box-bg;
+        color: $body-light;
+        &__button{
+            text-align: center;
+            padding-top: 5px;         
+            width: 100px;
+            height: 30px;
+            border: 2px solid $text_hover;
+            border-radius: 5px;
+            background-color: $box-border;
+            position:absolute;
+            right: 20px;
+
+        }
+        
 
 
     }

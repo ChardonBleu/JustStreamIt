@@ -18,8 +18,9 @@ function activeSlide(carousel) {
         currIndex = 0;
 
     function resize() {
-        width = Math.max(window.innerWidth * 0.2, 300);
-        height = width / 1.6;
+        
+        height = Math.max(window.innerWidth * 0.18, 300);
+        width = height * 182 / 266 ;
         totalWidth = width * items.length;
 
         slider.style.width = totalWidth + "px";
@@ -34,7 +35,7 @@ function activeSlide(carousel) {
     function move(index) {
         if (index < 1) {
             index = (items.length - 1);
-        } else if (index > (items.length - 1)) {
+        } else if (index > (items.length - 2)) {
             index = 1;
         }
         currIndex = index;
