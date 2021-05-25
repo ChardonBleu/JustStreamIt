@@ -6,12 +6,15 @@
 
 function activeSlide(carousel) {
 
-    var slider = carousel.getElementsByClassName('carousel__slider')[0],
+    const slider = carousel.getElementsByClassName('carousel__slider')[0],
     items = carousel.getElementsByClassName('carousel__slider__item'),
     prevBtn = carousel.getElementsByClassName('carousel__nav__prev')[0],
     nextBtn = carousel.getElementsByClassName('carousel__nav__next')[0];
 
-    var width, height, totalWidth, margin = 20,
+    let width = 20,
+        height = 20,
+        totalWidth = 20,
+        margin = 20,
         currIndex = 0;
 
     function resize() {
@@ -68,8 +71,8 @@ activeSlide(carousel0);
 var carousel1 = document.getElementById('carousel1');
 activeSlide(carousel1);
 
-var carousel2 = document.getElementById('carousel2');
+var carousel1 = document.getElementById('carousel2');
 activeSlide(carousel2);
 
-var carousel3 = document.getElementById('carousel3');
+var carousel1 = document.getElementById('carousel3');
 activeSlide(carousel3);

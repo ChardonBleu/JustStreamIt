@@ -3,12 +3,13 @@
 
 var span = document.getElementsByClassName("modal__close")[0];
 var modal = document.getElementById("myModal");
+const imgs = document.getElementsByClassName("carousel__slider__item__img");
 
-function fonctionModale(carousel_img) {
+function fonctionModale(event) {
     'use-strict';
     modal.style.display = "flex";
     var modalImg = document.getElementById("modalImg");
-    modalImg.src = carousel_img.src;
+    modalImg.src = event.target.src;
 }
 
 function modalClose() {
@@ -17,3 +18,7 @@ function modalClose() {
 }
 
 span.addEventListener('click', modalClose);
+
+for (const img of imgs) {
+    img.addEventListener('click', fonctionModale)
+ }
