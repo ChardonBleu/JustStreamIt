@@ -18,3 +18,16 @@
         width: 200px;
     }
 }
+
+@media all and (max-width: 1024px) {
+    .header {
+    &__title {
+        font-size: 3rem;
+        margin-left: 20px;
+
+    }
+    &__logo img{
+        display: none;
+    }
+}
+}

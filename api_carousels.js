@@ -1,33 +1,38 @@
 /*jslint es6*/
 /*global document window fetch console*/
 
-function five_first_images_carousel(values, carousel_index) {
+/**
+ * @param  {} values
+ * @param  {number} carouselIndex
+
+ */
+function fiveFirstImagesCarousel(values, carouselIndex) {
     'use-strict';
-    const carousel_items = document
-        .getElementById("carousel" + carousel_index)
+    const carouselItems = document
+        .getElementById("carousel" + carouselIndex)
         .getElementsByClassName("carousel__slider__item__img");
     let index = 0;
     while (index < 5) {
-        const image_url = values.results[index].image_url;
-        carousel_items[index].src = image_url;
+        const imageUrl = values.results[index].image_url;
+        carouselItems[index].src = imageUrl;
         index += 1;
     }
 }
 
-function two_last_images_carousel(values, carousel_index) {
+function twoLastImagesCarousel(values, carouselIndex) {
     'use-strict';
-    const carousel_items = document
-        .getElementById("carousel" + carousel_index)
+    const carouselItems = document
+        .getElementById("carousel" + carouselIndex)
         .getElementsByClassName("carousel__slider__item__img");
     let index = 0;
     while (index < 2) {
-        const image_url = values.results[index].image_url;
-        carousel_items[index + 5].src = image_url;
+        const imageUrl = values.results[index].image_url;
+        carouselItems[index + 5].src = imageUrl;
         index += 1;
     }
 }
 
-function carousel_request(carousel_index, request) {
+function carouselRequest(carouselIndex, request) {
     'use-strict';
     fetch("http://127.0.0.1:8000/api/v1/titles/?" + request + "&page=1")
         .then(function (response) {
@@ -36,7 +41,7 @@ function carousel_request(carousel_index, request) {
             }
         })
         .then(function (values) {
-            five_first_images_carousel(values, carousel_index);
+            fiveFirstImagesCarousel(values, carouselIndex);
         })
         .catch(function (error) {
             console.log(error);
@@ -49,15 +54,14 @@ function carousel_request(carousel_index, request) {
             }
         })
         .then(function (values) {
-            two_last_images_carousel(values, carousel_index);
+            twoLastImagesCarousel(values, carouselIndex);
         })
         .catch(function (error) {
             console.log(error);
         });
 }
 
-carousel_request(0, "sort_by=-imdb_score");
-carousel_request(1, "sci-Fi");
-carousel_request(2, "genre=comedy");
-carousel_request(3, "genre=adventure");
-
+carouselRequest(0, "sort_by=-imdb_score");
+carouselRequest(1, "genre=sci-Fi&sort_by=-votes");
+carouselRequest(2, "genre=comedy&sort_by=-votes");
+carouselRequest(3, "genre=thriller&sort_by=-votes");

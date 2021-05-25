@@ -18,7 +18,6 @@ function activeSlide(carousel) {
         currIndex = 0;
 
     function resize() {
-        
         height = Math.max(window.innerWidth * 0.18, 300);
         width = height * 182 / 266 ;
         totalWidth = width * items.length;
