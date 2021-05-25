@@ -11,8 +11,8 @@ function activeSlide(carousel) {
     prevBtn = carousel.getElementsByClassName('carousel__nav__prev')[0],
     nextBtn = carousel.getElementsByClassName('carousel__nav__next')[0];
 
-    let width = 20,
-        height = 20,
+    let width = 300,
+        height = 300,
         totalWidth = 20,
         margin = 20,
         currIndex = 0;
