@@ -13,22 +13,28 @@ function activeSlide(carousel) {
     items = carousel.getElementsByClassName('carousel__slider__item'),
     prevBtn = carousel.getElementsByClassName('carousel__nav__prev')[0],
     nextBtn = carousel.getElementsByClassName('carousel__nav__next')[0];
-
-    let width = 300,
-        height = 300,
-        totalWidth = 20,
+    
+    let width = 182,
+        height = 182,
         margin = 30,
+        totalWidth = width * items.length + 7 * margin,
+        visibleBoxes = 4,
         currentIndex = 0;
 
     /**
-     * Adapt carousel boxes dimentions and adjust  apparent number of boxes
+     * Adapt carousel boxes dimentions and adjust apparent number of boxes
      */
     function resize() {
-        console.log(window.innerWidth);
-        width =  Math.max((window.innerWidth * 0.685 - 3 * margin) / 4, 182);
-        height = width / 0.8;
+        
+        if (window.innerWidth > 1024) {
+            visibleBoxes = 4;
+        } else {
+            visibleBoxes = 2;
+        }  
 
-        totalWidth = width * items.length + 7 * margin;
+        width =  Math.max((window.innerWidth * 0.7 - (visibleBoxes - 1) * margin) / visibleBoxes, 182);
+        height = width / 0.7;
+        totalWidth = width * items.length + (items.length - 1) * margin;
 
         slider.style.width = totalWidth + "px";
 
@@ -36,7 +42,7 @@ function activeSlide(carousel) {
             item.style.width = width + "px";
             item.style.height = height + "px";
         }
-
+        move(1);
     }
 
     /**
@@ -45,11 +51,13 @@ function activeSlide(carousel) {
      * @param  {number} index - box index
      */
     function move(index) {
+
         if (index < 1) {
-            index = (items.length - 1);
-        } else if (index > (items.length - 2)) {
+            index = (items.length - (visibleBoxes - 1));
+        } else if (index > (items.length - (visibleBoxes - 1))) {
             index = 1;
         }
+
         currentIndex = index;
         slider.style.transform = "translateX(" + ((index-1) * (-width - margin)) + "px)";
 

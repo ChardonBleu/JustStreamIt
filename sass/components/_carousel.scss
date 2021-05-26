@@ -4,12 +4,13 @@ html > .carousel, body > .carousel {
 
 
 .carousel {
-    width: 70%;
+    width: 71%;
     display: flex;
     flex-direction: column;
     margin: auto;
     overflow: hidden;
     margin-bottom: 50px;
+
     > p {
         font-size: 1.5em;
         font-weight: bold;
@@ -43,10 +44,8 @@ html > .carousel, body > .carousel {
         display: flex;
         justify-content: space-between; 
         transition: transform 1s ease-in-out;
-        border: 1px solid #000;
         &__item {
-            height: 100%;
-
+            background-color: $box-bg;
             & h1 {
                 font-size: 5em;
                 width: 100%;
