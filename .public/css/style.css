@@ -97,7 +97,6 @@ html > .carousel, body > .carousel {
   margin: auto;
   overflow: hidden;
   margin-bottom: 50px;
-  z-index: 1000;
 }
 .carousel > p {
   font-size: 1.5em;
@@ -130,16 +129,12 @@ html > .carousel, body > .carousel {
 }
 .carousel__slider {
   display: flex;
+  justify-content: space-between;
   transition: transform 1s ease-in-out;
+  border: 1px solid #000;
 }
 .carousel__slider__item {
-  margin: auto;
   height: 100%;
-  text-align: center;
-  border-color: #1489b8;
-  background: #1e272e;
-  border-width: 3px;
-  border-style: solid;
 }
 .carousel__slider__item h1 {
   font-size: 5em;
