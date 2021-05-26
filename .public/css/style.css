@@ -59,33 +59,49 @@ html *, body * {
 .best {
   display: flex;
   margin: auto;
-  align-items: center;
   position: relative;
   top: 20px;
   margin-bottom: 40px;
-  width: 70%;
+  width: 50%;
   background-color: #1e272e;
 }
 .best__img {
-  width: 15%;
+  min-width: 250px;
+  width: 20%;
 }
 .best__details {
   padding-left: 20px;
   background-color: #1e272e;
+}
+.best__details > p {
+  font-size: 1rem;
   color: #fafdfe;
+  padding-bottom: 20px;
+}
+.best__details > h1 {
+  font-size: 1.5em;
+  padding-top: 20px;
+  color: #1489b8;
+  padding-bottom: 20px;
 }
 .best__details__button {
   text-align: center;
-  padding-top: 5px;
+  padding-top: 8px;
   width: 100px;
   height: 30px;
-  border: 2px solid #115a79;
+  border: 2px solid #b9cad8;
   border-radius: 5px;
   background-color: #1489b8;
   position: absolute;
-  right: 20px;
+  right: 20%;
+  top: 30%;
 }
 
+@media only screen and (max-width: 1200px) {
+  .best {
+    width: 70%;
+  }
+}
 html > .carousel, body > .carousel {
   padding-top: 0px;
 }

@@ -26,7 +26,7 @@ function activeSlide(carousel) {
      */
     function resize() {
         
-        if (window.innerWidth > 1024) {
+        if (window.innerWidth >= 1024) {
             visibleBoxes = 4;
         } else {
             visibleBoxes = 2;

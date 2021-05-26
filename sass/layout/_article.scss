@@ -1,30 +1,40 @@
 .best {
     display: flex;
     margin:auto;
-    align-items: center;
     position: relative;
     top: 20px;
     margin-bottom: 40px;
-    width: 70%;
+    width: 50%;
     background-color: $box-bg;
    
     &__img {
-        width: 15%;
+        min-width: 250px;
+        width: 20%;
     }
     &__details{ 
-        padding-left: 20px;
-        background-color: $box-bg;
-        color: $body-light;
+        padding-left: 20px;        
+        background-color: $box-bg;        
+        > p {
+            font-size: 1rem;
+            color: $body-light;padding-bottom: 20px;
+        }
+        > h1 {
+            font-size: 1.5em;
+            padding-top: 20px;
+            color: $text;
+            padding-bottom: 20px;
+        }
         &__button{
             text-align: center;
-            padding-top: 5px;         
+            padding-top: 8px;         
             width: 100px;
             height: 30px;
-            border: 2px solid $text_hover;
+            border: 2px solid $body-dark;
             border-radius: 5px;
             background-color: $box-border;
             position:absolute;
-            right: 20px;
+            right: 20%;
+            top: 30%;
 
         }
         
@@ -32,4 +42,10 @@
 
     }
 
+}
+
+@media only screen and (max-width:1200px){
+    .best {
+        width: 70%;
+    }
 }
