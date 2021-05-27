@@ -54,6 +54,7 @@ function bestFilm(values) {
     const best_img = document.getElementsByClassName("best__details__img")[0];
     best_img.src = image_url;
     const id_film = values.results[0].id;
+    best_img.alt = id_film;
     detailsBestFilm(id_film);
 }
 

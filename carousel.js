@@ -25,7 +25,6 @@ function activeSlide(carousel) {
      * Adapt carousel boxes dimentions and adjust apparent number of boxes
      */
     function resize() {
-        console.log(window.innerWidth);
         if (window.innerWidth >= 1024) {
             visibleBoxes = 4;
         } else {
