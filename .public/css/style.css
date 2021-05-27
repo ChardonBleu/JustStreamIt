@@ -77,7 +77,7 @@ html *, body * {
   justify-content: space-between;
   width: 100%;
 }
-.best__details__text > p {
+.best__details__text > div {
   padding-left: 20px;
   font-size: 1.5rem;
   color: #fafdfe;
@@ -214,15 +214,24 @@ html > .carousel, body > .carousel {
   display: flex;
   align-items: center;
   margin: auto;
+  width: 80%;
 }
 .modal__content__img {
   height: 600px;
   width: auto;
 }
 .modal__content__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   height: 600px;
   color: #b9cad8;
   background-color: #1e272e;
+}
+.modal__content__text > div {
+  padding-left: 20px;
+  font-size: 1rem;
+  color: #fafdfe;
 }
 
 @keyframes zoom {
@@ -236,19 +245,18 @@ html > .carousel, body > .carousel {
 @media only screen and (max-width: 1024px) {
   .modal__content {
     flex-direction: column;
-    justify-content: space-around;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
   }
   .modal__content__img {
     width: 80%;
     height: auto;
   }
   .modal__content__text {
-    width: 100%;
-    height: 400px;
-    color: #b9cad8;
-    background-color: #1e272e;
+    height: 50%;
+  }
+  .modal__content__text > div {
+    font-size: 0.8rem;
   }
   .modal__close {
     top: 0px;

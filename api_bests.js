@@ -10,7 +10,7 @@
  */
 function newParagraph(parent_document, paragraph) {
     'use-strict';
-    const newElt = document.createElement("p");
+    const newElt = document.createElement("div");
     parent_document.appendChild(newElt).innerHTML = paragraph;
 }
 
