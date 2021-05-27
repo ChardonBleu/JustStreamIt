@@ -1,29 +1,35 @@
 .best {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin:auto;
     position: relative;
     top: 20px;
     margin-bottom: 40px;
     width: 50%;
     background-color: $box-bg;
-   
-    &__img {
-        min-width: 250px;
-        width: 20%;
-    }
-    &__details{ 
-        padding-left: 20px;        
-        background-color: $box-bg;        
-        > p {
-            font-size: 1rem;
-            color: $body-light;padding-bottom: 20px;
-        }
-        > h1 {
-            font-size: 1.5em;
-            padding-top: 20px;
-            color: $text;
+    > h1 {
+        font-size: 2em;
+        color: $text;
+    }  
+    &__details{
+        position:relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &__text {
+            > p {
+            padding-left: 20px;
+            font-size: 1.5rem;
+            color: $body-light;
             padding-bottom: 20px;
+            }
         }
+        &__img {
+            width: 20%;
+            min-width: 182px;
+
+        }        
         &__button{
             text-align: center;
             padding-top: 8px;         
@@ -33,19 +39,42 @@
             border-radius: 5px;
             background-color: $box-border;
             position:absolute;
-            right: 20%;
-            top: 30%;
+            right: 22%;
+            top: 5px;
+        }  
+    }
+}
 
-        }
-        
+@media only screen and (max-width:1730px){
+    .best {
+        width: 70%;
+    }
+}
 
+@media only screen and (max-width:1240px){
+    .best {
+        width: 90%;
 
     }
 
 }
 
-@media only screen and (max-width:1200px){
+@media only screen and (max-width:900px){
     .best {
-        width: 70%;
+        width: 100%;
+        > h1 {
+            font-size: 1.2em;
+        }
+        &__details {
+            &__text {
+                > p {
+                font-size: 1.2rem;
+                }
+            }
+            &__button{
+                right: 200px;
+            }
+        }
+        
     }
 }
