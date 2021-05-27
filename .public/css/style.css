@@ -58,6 +58,8 @@ html *, body * {
 
 .best {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
   position: relative;
   top: 20px;
@@ -65,24 +67,25 @@ html *, body * {
   width: 50%;
   background-color: #1e272e;
 }
-.best__img {
-  min-width: 250px;
-  width: 20%;
+.best > h1 {
+  font-size: 2em;
+  color: #1489b8;
 }
 .best__details {
-  padding-left: 20px;
-  background-color: #1e272e;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-.best__details > p {
-  font-size: 1rem;
+.best__details__text > p {
+  padding-left: 20px;
+  font-size: 1.5rem;
   color: #fafdfe;
   padding-bottom: 20px;
 }
-.best__details > h1 {
-  font-size: 1.5em;
-  padding-top: 20px;
-  color: #1489b8;
-  padding-bottom: 20px;
+.best__details__img {
+  width: 20%;
+  min-width: 182px;
 }
 .best__details__button {
   text-align: center;
@@ -93,13 +96,32 @@ html *, body * {
   border-radius: 5px;
   background-color: #1489b8;
   position: absolute;
-  right: 20%;
-  top: 30%;
+  right: 22%;
+  top: 25px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1730px) {
   .best {
     width: 70%;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  .best {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .best {
+    width: 100%;
+  }
+  .best > h1 {
+    font-size: 1.2em;
+  }
+  .best__details__text > p {
+    font-size: 1.2rem;
+  }
+  .best__details__button {
+    right: 200px;
   }
 }
 html > .carousel, body > .carousel {

@@ -28,9 +28,9 @@ function detailsBestFilm(id_film) {
             }
         })
         .then(function (values) {
-            const best_details = (document.getElementsByClassName("best__details")[0]);
+            const best_details = (document.getElementsByClassName("best__details__text")[0]);
             const title = values.title;
-            let title_html = "<p><strong>Titre:</strong> " + title + "</p>";
+            let title_html = "<h2><strong>" + title + "</strong></h2>";
             newParagraph(best_details, title_html);
             const resume = values.long_description;
             let resume_html = "<p><strong>Résumé:</strong> " + resume + "</p>";
@@ -51,7 +51,7 @@ function detailsBestFilm(id_film) {
 function bestFilm(values) {
     'use-strict';
     const image_url = values.results[0].image_url;
-    const best_img = document.getElementsByClassName("best__img")[0];
+    const best_img = document.getElementsByClassName("best__details__img")[0];
     best_img.src = image_url;
     const id_film = values.results[0].id;
     detailsBestFilm(id_film);

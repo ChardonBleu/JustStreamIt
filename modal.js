@@ -33,7 +33,7 @@ function ModaleBest() {
     'use-strict';
     modal.style.display = "flex";
     var modalImg = document.getElementById("modalImg");
-    bestImg = document.getElementsByClassName("best__img")[0];
+    bestImg = document.getElementsByClassName("best__details__img")[0];
     modalImg.src = bestImg.src;
 }
 

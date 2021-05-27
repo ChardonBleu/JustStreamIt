@@ -13,7 +13,7 @@ function activeSlide(carousel) {
     items = carousel.getElementsByClassName('carousel__slider__item'),
     prevBtn = carousel.getElementsByClassName('carousel__nav__prev')[0],
     nextBtn = carousel.getElementsByClassName('carousel__nav__next')[0];
-    
+
     let width = 182,
         height = 182,
         margin = 30,
@@ -25,12 +25,12 @@ function activeSlide(carousel) {
      * Adapt carousel boxes dimentions and adjust apparent number of boxes
      */
     function resize() {
-        
+        console.log(window.innerWidth);
         if (window.innerWidth >= 1024) {
             visibleBoxes = 4;
         } else {
             visibleBoxes = 2;
-        }  
+        }
 
         width =  Math.max((window.innerWidth * 0.7 - (visibleBoxes - 1) * margin) / visibleBoxes, 182);
         height = width / 0.7;
