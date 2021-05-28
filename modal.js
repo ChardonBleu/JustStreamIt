@@ -7,7 +7,7 @@ const modal = document.getElementById("myModal");
 const imgs = document.getElementsByClassName("carousel__slider__item__img");
 
 const modalText = document.getElementsByClassName("modal__content modal__content__text")[0];
-modalText.innerHTML = "<img class='modal__content__text__img' id='modalImg'></div>";
+modalText.innerHTML = '<div class="modal__content__img"><img  id="modalImg"/></div>';
 
 /**
  * Hide modal window
@@ -24,7 +24,7 @@ function modalClose() {
 function modalCarousel(event) {
     'use-strict';
     const modalText = document.getElementsByClassName("modal__content modal__content__text")[0];
-    modalText.innerHTML = "<img class='modal__content__text__img' id='modalImg'></div>";
+    modalText.innerHTML = '<div class="modal__content__img"><img  id="modalImg"/></div>';
     modal.style.display = "flex";
     const modalImg = document.getElementById("modalImg");
     modalImg.src = event.target.src;
@@ -38,7 +38,7 @@ function modalCarousel(event) {
 function modalBest() {
     'use-strict';
     const modalText = document.getElementsByClassName("modal__content modal__content__text")[0];
-    modalText.innerHTML = "<img class='modal__content__text__img' id='modalImg'></div>";
+    modalText.innerHTML = "<img class='modal__content__img' id='modalImg'></div>";
     modal.style.display = "flex";
     const modalImg = document.getElementById("modalImg");
     bestImg = document.getElementsByClassName("best__details__img")[0];

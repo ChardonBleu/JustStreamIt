@@ -211,13 +211,13 @@ html > .carousel, body > .carousel {
   cursor: pointer;
 }
 .modal__content {
+  position: absolute;
   display: flex;
   align-items: center;
   margin: auto;
   width: 90%;
 }
 .modal__content__text {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -228,11 +228,6 @@ html > .carousel, body > .carousel {
   padding-left: 20px;
   font-size: 1rem;
   color: #fafdfe;
-}
-.modal__content__text > div__img {
-  position: relative;
-  top: 20px;
-  right: 0px;
 }
 
 @keyframes zoom {

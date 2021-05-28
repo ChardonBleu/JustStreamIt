@@ -24,27 +24,25 @@
         }
     }
     &__content {
+        position: absolute;
         display: flex;
         align-items: center;
         margin:auto;
         width:90%;
-        
+        &__img {
+
+          }
         &__text{
-          position: absolute;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
           color: $body-dark;
-          background-color: $box-bg;
+          background-color: $box-bg;          
           > div {
             padding-left: 20px;
             font-size: 1rem;
             color: $body-light;
-          &__img {
-            position: relative;
-            top: 20px;
-            right: 0px;
-            }
+          
           }
         }
     }
