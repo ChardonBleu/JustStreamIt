@@ -20,8 +20,8 @@ function fiveFirstImagesCarousel(values, carouselIndex) {
     while (index < 5) {
         const imageUrl = values.results[index].image_url;
         carouselItems[index].src = imageUrl;
-        const id_film = values.results[index].id;
-        carouselItems[index].alt = id_film;
+        const idFilm = values.results[index].id;
+        carouselItems[index].alt = idFilm;
         index += 1;
     }
 }
@@ -42,8 +42,8 @@ function twoLastImagesCarousel(values, carouselIndex) {
     while (index < 2) {
         const imageUrl = values.results[index].image_url;
         carouselItems[index + 5].src = imageUrl;
-        const id_film = values.results[index].id;
-        carouselItems[index].alt = id_film;
+        const idFilm = values.results[index].id;
+        carouselItems[index + 5].alt = idFilm;
         index += 1;
     }
 }

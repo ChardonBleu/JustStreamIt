@@ -214,17 +214,13 @@ html > .carousel, body > .carousel {
   display: flex;
   align-items: center;
   margin: auto;
-  width: 80%;
-}
-.modal__content__img {
-  height: 600px;
-  width: auto;
+  width: 90%;
 }
 .modal__content__text {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 600px;
   color: #b9cad8;
   background-color: #1e272e;
 }
@@ -232,6 +228,11 @@ html > .carousel, body > .carousel {
   padding-left: 20px;
   font-size: 1rem;
   color: #fafdfe;
+}
+.modal__content__text > div__img {
+  position: relative;
+  top: 20px;
+  right: 0px;
 }
 
 @keyframes zoom {
@@ -245,15 +246,9 @@ html > .carousel, body > .carousel {
 @media only screen and (max-width: 1024px) {
   .modal__content {
     flex-direction: column;
-    width: 90%;
-    height: 90%;
   }
   .modal__content__img {
     width: 80%;
-    height: auto;
-  }
-  .modal__content__text {
-    height: 50%;
   }
   .modal__content__text > div {
     font-size: 0.8rem;

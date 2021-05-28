@@ -30,10 +30,10 @@ function detailsBestFilm(id_film) {
         .then(function (values) {
             const best_details = (document.getElementsByClassName("best__details__text")[0]);
             const title = values.title;
-            let title_html = "<h2><strong>" + title + "</strong></h2>";
+            const title_html = "<h2><strong>" + title + "</strong></h2>";
             newParagraph(best_details, title_html);
             const resume = values.long_description;
-            let resume_html = "<p><strong>Résumé:</strong> " + resume + "</p>";
+            const resume_html = "<p><strong>Résumé:</strong> " + resume + "</p>";
             newParagraph(best_details, resume_html);
         })
         .catch(function (error) {
