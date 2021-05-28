@@ -31,7 +31,7 @@ function activeSlide(carousel) {
             visibleBoxes = 2;
         }
 
-        width =  Math.max((window.innerWidth * 0.7 - (visibleBoxes - 1) * margin) / visibleBoxes, 182);
+        width =  Math.max((window.innerWidth * 0.7 - (visibleBoxes - 1) * margin) / visibleBoxes);
         height = width / 0.7;
         totalWidth = width * items.length + (items.length - 1) * margin;
 

@@ -10,7 +10,7 @@
     background-color: $box-bg;
     > h1 {
         font-size: 2em;
-        color: $text;
+        color: $box-border;
     }  
     &__details{
         position:relative;
@@ -35,12 +35,17 @@
             padding-top: 8px;         
             width: 100px;
             height: 30px;
-            border: 2px solid $body-dark;
             border-radius: 5px;
             background-color: $box-border;
+            color: $box-bg;
             position:absolute;
             right: 22%;
             top: 25px;
+            &:hover{
+                background-color: $text-hover;
+                color:$body-dark;
+                transition: 0.3s;
+            }
         }  
     }
 }

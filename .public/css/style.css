@@ -92,12 +92,17 @@ html *, body * {
   padding-top: 8px;
   width: 100px;
   height: 30px;
-  border: 2px solid #b9cad8;
   border-radius: 5px;
   background-color: #1489b8;
+  color: #1e272e;
   position: absolute;
   right: 22%;
   top: 25px;
+}
+.best__details__button:hover {
+  background-color: #115a79;
+  color: #b9cad8;
+  transition: 0.3s;
 }
 
 @media only screen and (max-width: 1730px) {
@@ -192,6 +197,7 @@ html > .carousel, body > .carousel {
   left: 0px;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.9);
   animation-name: zoom;
   animation-duration: 0.6s;
@@ -211,23 +217,38 @@ html > .carousel, body > .carousel {
   cursor: pointer;
 }
 .modal__content {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  width: 90%;
-}
-.modal__content__text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  color: #b9cad8;
+  margin: auto;
+  width: 60%;
   background-color: #1e272e;
 }
-.modal__content__text > div {
+.modal__content > div {
   padding-left: 20px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #fafdfe;
+}
+.modal__content > div h1 {
+  color: #1489b8;
+}
+.modal__content > div p > mark {
+  background-color: transparent;
+  color: #b9cad8;
+}
+.modal__content__court {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.modal__content__court__text {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+}
+.modal__content__court__img img {
+  height: 400px;
+  padding-right: 20px;
 }
 
 @keyframes zoom {
@@ -238,19 +259,20 @@ html > .carousel, body > .carousel {
     transform: scale(1);
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1700px) {
   .modal__content {
-    flex-direction: column;
+    width: 70%;
   }
-  .modal__content__img {
+}
+@media only screen and (max-width: 1024px) {
+  .modal__close {
+    right: 20px;
+  }
+  .modal__content {
     width: 80%;
   }
-  .modal__content__text > div {
-    font-size: 0.8rem;
-  }
-  .modal__close {
-    top: 0px;
-    right: 20px;
+  .modal__content > div {
+    font-size: 1.3rem;
   }
 }
 
