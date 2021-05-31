@@ -7,7 +7,6 @@
     justify-content: space-between;
     width: 100%;
     background-color: $body-light;
-
     &__title {
         font-size: 5rem;
         flex: 2;
@@ -17,17 +16,33 @@
     &__logo img{
         width: 200px;
     }
+    &__nav {
+        padding-right: 50px;
+        text-align: right;
+        &__link {
+            display: inline;
+            font-size: 2rem;
+            padding-left: 1.5rem;
+            & a {
+            text-decoration: none;
+            color: $box-border;
+            }
+            & a:hover{
+                color: $text-hover;
+            }
+        }
+    }
 }
 
 @media all and (max-width: 1024px) {
     .header {
-    &__title {
-        font-size: 3rem;
-        margin-left: 20px;
+        &__title {
+            font-size: 3rem;
+            margin-left: 20px;
 
+        }
+        &__logo img{
+         display: none;
+        }
     }
-    &__logo img{
-        display: none;
-    }
-}
 }
