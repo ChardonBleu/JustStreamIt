@@ -50,21 +50,19 @@
     }
 }
 
-@media only screen and (max-width:1730px){
+@media only screen and (max-width:1730px) {
     .best {
         width: 70%;
     }
 }
 
-@media only screen and (max-width:1240px){
+@media only screen and (max-width:1240px) {
     .best {
         width: 90%;
-
     }
-
 }
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:900px) {
     .best {
         width: 100%;
         > h1 {
@@ -79,7 +77,6 @@
             &__button{
                 right: 200px;
             }
-        }
-        
+        }        
     }
 }

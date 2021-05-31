@@ -13,7 +13,7 @@
         color: $text-hover;
         margin-left: 50px;
     }
-    &__logo img{
+    &__logo img {
         width: 200px;
     }
     &__nav {
@@ -27,7 +27,7 @@
             text-decoration: none;
             color: $box-border;
             }
-            & a:hover{
+            & a:hover {
                 color: $text-hover;
             }
         }
@@ -41,7 +41,7 @@
             margin-left: 20px;
 
         }
-        &__logo img{
+        &__logo img {
          display: none;
         }
     }
