@@ -10,7 +10,11 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "dependencies": {
-    "jslint": "^0.12.1"
+    "autoprefixer": "^10.2.6",
+    "jslint": "^0.12.1",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1"
   }
 }

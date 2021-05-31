@@ -12,7 +12,7 @@
         font-size: 2em;
         color: $box-border;
     }  
-    &__details{
+    &__details {
         position:relative;
         display: flex;
         justify-content: space-between;
@@ -28,7 +28,7 @@
         &__img {
             width: 20%;
             min-width: 182px;
-
+            max-height: 268px;
         }        
         &__button{
             text-align: center;
@@ -50,32 +50,39 @@
     }
 }
 
-@media only screen and (max-width:1730px) {
+@media all and (max-width:1730px) {
     .best {
         width: 70%;
     }
 }
 
-@media only screen and (max-width:1240px) {
+@media all and (max-width:1240px) {
     .best {
         width: 90%;
+        &__details {
+            &__text {
+                > div {
+                font-size: 1.6rem;
+                }
+            }
+            &__button {
+                right: 200px;
+            }
+        }        
     }
 }
 
-@media only screen and (max-width:900px) {
+@media all and (max-width:1024px) {
     .best {
-        width: 100%;
         > h1 {
-            font-size: 1.2em;
+            font-size: 2em;
         }
         &__details {
             &__text {
-                > p {
-                font-size: 1.2rem;
+                > div  {
+                font-size: 1.4em;
+
                 }
-            }
-            &__button{
-                right: 200px;
             }
         }        
     }
