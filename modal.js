@@ -22,8 +22,11 @@ function modalClose() {
 function modalCarousel(event) {
     'use-strict';
     const modalText = document.getElementsByClassName("modal__content")[0];
-    modalText.innerHTML = '<div class="modal__content__court"><div class="modal__content__court__text">' +
-    '</div><div class="modal__content__court__img"><img id="modalImg"/></div></div><div class="modal__content__long"></div>';
+    modalText.innerHTML = '<div class="modal__content__court">' +
+        '<div class="modal__content__court__text">' +
+        '</div><div class="modal__content__court__img">' +
+        '<img id="modalImg"/></div></div>' +
+        '<div class="modal__content__long"></div>';
     modal.style.display = "flex";
     const modalImg = document.getElementById("modalImg");
     modalImg.src = event.target.src;
@@ -37,8 +40,11 @@ function modalCarousel(event) {
 function modalBest() {
     'use-strict';
     const modalText = document.getElementsByClassName("modal__content")[0];
-    modalText.innerHTML = '<div class="modal__content__court"><div class="modal__content__court__text">' +
-    '</div><div class="modal__content__court__img"><img id="modalImg"/></div></div><div class="modal__content__long"></div>';
+    modalText.innerHTML = '<div class="modal__content__court">' +
+        '<div class="modal__content__court__text">' +
+        '</div><div class="modal__content__court__img">' +
+        '<img id="modalImg"/></div></div>' +
+        '<div class="modal__content__long"></div>';
     modal.style.display = "flex";
     const modalImg = document.getElementById("modalImg");
     bestImg = document.getElementsByClassName("best__details__img")[0];
@@ -46,7 +52,10 @@ function modalBest() {
     const idFilm = bestImg.alt;
     modalDetails(idFilm);
 }
-
+/**
+ * Convert API array into string
+ * @param  {object} array from API
+ */
 function convertArrayString(array) {
     'use-strict';
     let string = "";
@@ -55,7 +64,10 @@ function convertArrayString(array) {
     }
     return string;
 }
-
+/**
+ * Add details film designed by id film into modal
+ * @param  {number} id API id film
+ */
 function modalDetails(id) {
     'use-strict';
     fetch("http://localhost:8000/api/v1/titles/" + id)
@@ -65,33 +77,45 @@ function modalDetails(id) {
             }
         })
         .then(function (values) {
-            const modalTextCourt = document.getElementsByClassName("modal__content__court__text")[0];
-            const modalTextLong = document.getElementsByClassName("modal__content__long")[0];
+            const modalTextCourt = document
+                .getElementsByClassName("modal__content__court__text")[0];
+            const modalTextLong = document
+                .getElementsByClassName("modal__content__long")[0];
 
             const modalTitle = "<h1>" + values.title + "</h1>";
 
-            const modalDate = "<p><mark>Release date:</mark> " + values.date_published + "</p>";
-            const modalRated = "<p><mark>Rated: </mark>" + values.rated + "</p>";
-            const modalImdb = "<p><mark>IMDb score: </mark>" + values.imdb_score + "</p>";
-            const modalDuration = "<p><mark>Duration: </mark>" + values.duration + " min</p>";
-            const modalBoxOffice = "<p><mark>Résultats box office mondial: </mark>" + values.worldwide_gross_income + " entries</p>";
-            const modalDescription = "<p><mark>Résumé: </mark>" + values.long_description + "</p>";
+            const modalDate = "<p><mark>Release date:</mark> " +
+                values.date_published + "</p>";
+            const modalRated = "<p><mark>Rated: </mark>" +
+                values.rated + "</p>";
+            const modalImdb = "<p><mark>IMDb score: </mark>" +
+                values.imdb_score + "</p>";
+            const modalDuration = "<p><mark>Duration: </mark>" +
+                values.duration + " min</p>";
+            const modalBoxOffice = "<p><mark>Résultats box office mondial: </mark>" +
+                values.worldwide_gross_income + " entries</p>";
+            const modalDescription = "<p><mark>Résumé: </mark>" +
+                values.long_description + "</p>";
 
             let stringGenres = "";
             stringGenres = convertArrayString(values.genres);
-            const modalGenres = "<p><mark>Genres: </mark>" + stringGenres.slice(0, stringGenres.length - 2) + "</p>";
+            const modalGenres = "<p><mark>Genres: </mark>" +
+                stringGenres.slice(0, stringGenres.length - 2) + "</p>";
 
             let stringDirectors = "";
             stringDirectors = convertArrayString(values.directors);
-            const modalDirectors = "<p><mark>Director: </mark>" + stringDirectors.slice(0, stringDirectors.length - 2) + "</p>";
+            const modalDirectors = "<p><mark>Director: </mark>" +
+                stringDirectors.slice(0, stringDirectors.length - 2) + "</p>";
 
             let stringActors = "";
             stringActors = convertArrayString(values.actors);
-            const modalActors = "<p><mark>Actors: </mark>" + stringActors.slice(0, stringActors.length - 2) + "</p>";
+            const modalActors = "<p><mark>Actors: </mark>" +
+                stringActors.slice(0, stringActors.length - 2) + "</p>";
 
             let stringCountries = "";
             stringCountries = convertArrayString(values.countries);
-            const modalCountries = "<p><mark>Countries: </mark>" + stringCountries.slice(0, stringCountries.length - 2) + "</p>";
+            const modalCountries = "<p><mark>Countries: </mark>" +
+                stringCountries.slice(0, stringCountries.length - 2) + "</p>";
 
             newParagraph(modalTextCourt, modalTitle);
             newParagraph(modalTextCourt, modalDuration);

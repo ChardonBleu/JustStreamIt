@@ -14,32 +14,37 @@ function activeSlide(carousel) {
     prevBtn = carousel.getElementsByClassName('carousel__nav__prev')[0],
     nextBtn = carousel.getElementsByClassName('carousel__nav__next')[0];
 
-    let width = 182,
-        height = 182,
+    let widthBox = 182,
+        heightBox = 268, /*width/height = 0,68*/
         margin = 30,
-        totalWidth = width * items.length + 7 * margin,
-        visibleBoxes = 4,
+        totalWidth = widthBox * items.length + (items.length - 1) * margin,
+        numberVisibleBoxes = 4,
         currentIndex = 0;
 
     /**
-     * Adapt carousel boxes dimentions and adjust apparent number of boxes
+     * Adapt carousel boxes dimentions and adjust apparent number of boxes.
+     * carousel width is 70% of window. The numberVisibleBoxes choosen might
+     * be visible in this box, with the margin choosen between each box:
+     * NumberVisibleBoxes * widthBox + (numberVisibleBoxes - 1) * margin =
+     * window.innerWidth * 70%
      */
     function resize() {
         if (window.innerWidth >= 1024) {
-            visibleBoxes = 4;
+            numberVisibleBoxes = 4;
         } else {
-            visibleBoxes = 2;
+            numberVisibleBoxes = 2;
         }
 
-        width =  Math.max((window.innerWidth * 0.7 - (visibleBoxes - 1) * margin) / visibleBoxes);
-        height = width / 0.7;
-        totalWidth = width * items.length + (items.length - 1) * margin;
+        widthBox = (window.innerWidth * 0.7 - (numberVisibleBoxes - 1) *
+                        margin) / numberVisibleBoxes;
+        heightBox = widthBox / 0.68;
+        totalWidth = widthBox * items.length + (items.length - 1) * margin;
 
         slider.style.width = totalWidth + "px";
 
         for (const item of items) {
-            item.style.width = width + "px";
-            item.style.height = height + "px";
+            item.style.width = widthBox + "px";
+            item.style.height = heightBox + "px";
         }
         move(1);
     }
@@ -52,13 +57,14 @@ function activeSlide(carousel) {
     function move(index) {
 
         if (index < 1) {
-            index = (items.length - (visibleBoxes - 1));
-        } else if (index > (items.length - (visibleBoxes - 1))) {
+            index = (items.length - (numberVisibleBoxes - 1));
+        } else if (index > (items.length - (numberVisibleBoxes - 1))) {
             index = 1;
         }
 
         currentIndex = index;
-        slider.style.transform = "translateX(" + ((index-1) * (-width - margin)) + "px)";
+        slider.style.transform = "translateX(" +
+                                ((index-1) * (-widthBox - margin)) + "px)";
 
     }
 
@@ -88,6 +94,11 @@ function activeSlide(carousel) {
         nextBtn.addEventListener('click', next);
     }
 
+    /**
+     * when the window is opened for the first time shwo first boxes of each
+     * carousel and adapt boxes number and sizes on window size.
+     * Wait for resize window or carousel navigation.
+     */
     function init() {
         resize();
         move(1);

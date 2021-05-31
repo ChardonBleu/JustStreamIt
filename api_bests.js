@@ -28,7 +28,8 @@ function detailsBestFilm(id_film) {
             }
         })
         .then(function (values) {
-            const best_details = (document.getElementsByClassName("best__details__text")[0]);
+            const best_details = (document
+                .getElementsByClassName("best__details__text")[0]);
             const title = values.title;
             const title_html = "<h2><strong>" + title + "</strong></h2>";
             newParagraph(best_details, title_html);
