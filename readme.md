@@ -46,7 +46,7 @@ https://www.w3schools.com/howto/default.asp
 Remerciements
 ---
 
-Un très grand merci à Thierry Chappuis pour tous leurs précieux conseils et retours,
+Un très grand merci à Thierry Chappuis pour son accompagnement, ses précieux conseils et sa grande disponibilité,
 et à tous les apprenants du Discord DA Pyhton.
 
 http://discord.pythonclassmates.org/
