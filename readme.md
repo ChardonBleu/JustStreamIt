@@ -9,8 +9,6 @@ Installation
 ---
 
 
-
-
 Ressources utilisées
 ---
 
@@ -23,23 +21,27 @@ Ressources web:
 
     Simplifiez vous le CSS avec SASS - Kassandre Pedro
 
-    https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass
+https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass
 
     Adoptez les API REST pour vos projets web - Kassandre Pedro
 
-    https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass
+https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass
 
     Aprennez à programmer avec JavaScript - Will Alexander
 
-    https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript
+https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript
 
     Ecrivez du JavaScript pour le Web - Fabien Henon
 
-    https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass
+https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass
 
-    CodePen - https://codepen.io/
+    CodePen
 
-    W3Schools - https://www.w3schools.com/howto/default.asp
+https://codepen.io/
+
+    W3Schools
+
+https://www.w3schools.com/howto/default.asp
 
 Remerciements
 ---
