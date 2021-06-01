@@ -60,30 +60,29 @@
     .best {
         width: 90%;
         &__details {
-            &__text {
-                > div {
-                font-size: 1.6rem;
-                }
-            }
             &__button {
                 right: 200px;
             }
+            &__text {
+                > div  {
+                font-size: 1.4rem;
+                }
+            }  
         }        
     }
 }
 
-@media all and (max-width:1024px) {
+@media all and (max-width:900px) {
     .best {
         > h1 {
-            font-size: 2em;
+            font-size: 1.3em;
         }
         &__details {
             &__text {
                 > div  {
-                font-size: 1.4em;
-
+                font-size: 1.2rem;
                 }
-            }
-        }        
+            }  
+        } 
     }
 }

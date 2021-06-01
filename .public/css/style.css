@@ -8,6 +8,7 @@ html, body {
 html *, body * {
   font-family: "Montserrat", sans-serif;
   color: var(#1489b8);
+  /*font-size: 100%;*/
 }
 
 .header {
@@ -21,7 +22,7 @@ html *, body * {
   background-color: #fafdfe;
 }
 .header__title {
-  font-size: 5rem;
+  font-size: 5em;
   flex: 2;
   color: #115a79;
   margin-left: 50px;
@@ -35,8 +36,8 @@ html *, body * {
 }
 .header__nav__link {
   display: inline;
-  font-size: 2rem;
-  padding-left: 1.5rem;
+  font-size: 2em;
+  padding-left: 1.5em;
 }
 .header__nav__link a {
   text-decoration: none;
@@ -48,11 +49,19 @@ html *, body * {
 
 @media all and (max-width: 1024px) {
   .header__title {
-    font-size: 3rem;
+    font-size: 3em;
     margin-left: 20px;
   }
   .header__logo img {
     display: none;
+  }
+}
+@media all and (max-width: 700px) {
+  .header__title {
+    font-size: 2em;
+  }
+  .header__nav__link {
+    font-size: 1.5em;
   }
 }
 .best {
@@ -114,19 +123,19 @@ html *, body * {
   .best {
     width: 90%;
   }
-  .best__details__text > div {
-    font-size: 1.6rem;
-  }
   .best__details__button {
     right: 200px;
   }
+  .best__details__text > div {
+    font-size: 1.4rem;
+  }
 }
-@media all and (max-width: 1024px) {
+@media all and (max-width: 900px) {
   .best > h1 {
-    font-size: 2em;
+    font-size: 1.3em;
   }
   .best__details__text > div {
-    font-size: 1.4em;
+    font-size: 1.2rem;
   }
 }
 html > .carousel, body > .carousel {
@@ -178,11 +187,6 @@ html > .carousel, body > .carousel {
 .carousel__slider__item {
   background-color: #1e272e;
 }
-.carousel__slider__item h1 {
-  font-size: 5em;
-  width: 100%;
-  color: #1489b8;
-}
 .carousel__slider__item img {
   width: 100%;
   height: 100%;
@@ -201,7 +205,6 @@ html > .carousel, body > .carousel {
   background-color: rgba(0, 0, 0, 0.9);
   animation-name: zoom;
   animation-duration: 0.6s;
-  font-size: 1.3em;
 }
 .modal__close {
   position: absolute;
@@ -224,6 +227,7 @@ html > .carousel, body > .carousel {
   width: 70%;
   background-color: #1e272e;
   padding-left: 20px;
+  font-size: 1.5em;
 }
 .modal__content > div {
   color: #fafdfe;
@@ -253,9 +257,6 @@ html > .carousel, body > .carousel {
   display: flex;
   flex-direction: column;
 }
-.modal__content__long > div {
-  color: #fafdfe;
-}
 
 @keyframes zoom {
   from {
@@ -265,13 +266,19 @@ html > .carousel, body > .carousel {
     transform: scale(1);
   }
 }
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1280px) {
+  .modal__content {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1024px) {
   .modal__close {
     top: 20px;
     right: 20px;
   }
   .modal__content {
     width: 90%;
+    font-size: 1.2em;
   }
 }
 

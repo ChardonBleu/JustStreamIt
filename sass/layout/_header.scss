@@ -8,7 +8,7 @@
     width: 100%;
     background-color: $body-light;
     &__title {
-        font-size: 5rem;
+        font-size: 5em;
         flex: 2;
         color: $text-hover;
         margin-left: 50px;
@@ -21,8 +21,8 @@
         text-align: right;
         &__link {
             display: inline;
-            font-size: 2rem;
-            padding-left: 1.5rem;
+            font-size: 2em;
+            padding-left: 1.5em;
             & a {
             text-decoration: none;
             color: $box-border;
@@ -37,12 +37,25 @@
 @media all and (max-width: 1024px) {
     .header {
         &__title {
-            font-size: 3rem;
+            font-size: 3em;
             margin-left: 20px;
 
         }
         &__logo img {
          display: none;
+        }
+    }
+}
+
+@media all and (max-width: 700px) {
+    .header {
+        &__title {
+            font-size: 2em;
+        }
+        &__nav {
+            &__link {
+                font-size: 1.5em;
+            }
         }
     }
 }
