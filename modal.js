@@ -92,7 +92,7 @@ function modalDetails(id) {
                 values.imdb_score + "</p>";
             const modalDuration = "<p><mark>Duration: </mark>" +
                 values.duration + " min</p>";
-            const modalBoxOffice = "<p><mark>Résultats box office mondial: </mark>" +
+            const modalBoxOffice = "<p><mark>World box office: </mark>" +
                 values.worldwide_gross_income + " entries</p>";
             const modalDescription = "<p><mark>Résumé: </mark>" +
                 values.long_description + "</p>";
