@@ -1,6 +1,8 @@
 /*jslint es6*/
 /*global document console*/
 
+/* This file has in charge the API request for modal window*/
+
 const span = document.getElementsByClassName("modal__close")[0];
 const bestButton = document.getElementsByClassName("best__details__button")[0];
 const modal = document.getElementById("myModal");
@@ -52,6 +54,7 @@ function modalBest() {
     const idFilm = bestImg.alt;
     modalDetails(idFilm);
 }
+
 /**
  * Convert API array into string
  * @param  {object} array from API
@@ -64,6 +67,7 @@ function convertArrayString(array) {
     }
     return string;
 }
+
 /**
  * Add details film designed by id film into modal
  * @param  {number} id API id film
@@ -86,14 +90,35 @@ function modalDetails(id) {
 
             const modalDate = "<p><mark>Release date:</mark> " +
                 values.date_published + "</p>";
+
+            let rated = "";
+            if (values.rated == "Not rated or unkown rating") {
+                rated = "Unknown";
+            } else if (values.rated == "R") {
+                rated = "Restricted";
+            } else if (values.rated == "0") {
+                rated = "For all";
+            } else {
+                rated = values.rated + " years +";
+            }
+
             const modalRated = "<p><mark>Rated: </mark>" +
-                values.rated + "</p>";
+                rated + "</p>";
+
             const modalImdb = "<p><mark>IMDb score: </mark>" +
                 values.imdb_score + "</p>";
             const modalDuration = "<p><mark>Duration: </mark>" +
                 values.duration + " min</p>";
+
+            let boxOffice = "";
+            if (values.worldwide_gross_income === null) {
+                boxOffice = "Unknown";
+            } else {
+                boxOffice = new Intl.NumberFormat().format(values.worldwide_gross_income);
+            };
             const modalBoxOffice = "<p><mark>World box office: </mark>" +
-                values.worldwide_gross_income + " entries</p>";
+                boxOffice + "</p>";
+
             const modalDescription = "<p><mark>Résumé: </mark>" +
                 values.long_description + "</p>";
 

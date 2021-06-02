@@ -4,3 +4,9 @@ html, body {
     background: -webkit-radial-gradient(circle, $body-light 50%, $body-dark 100%);
     background: radial-gradient(circle, $body-light 10%, $body-dark 100%);
   }
+
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

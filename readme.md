@@ -8,6 +8,18 @@ Page d'accueil d'un site de streaming. Mise en oeuvre de carousels et d'une fen�
 Installation
 ---
 
+Télécharger l'ensemble des fichiers et dossiers.
+Si necessaire installer Sass:
+
+```bash 
+npm -g install sass
+```
+Le fichier package.json contient déjà les instructions de surveillance des fichiers sass.
+Lancer la surveillance:
+
+ ```bash 
+npm run sass
+```
 
 Ressources utilisées
 ---

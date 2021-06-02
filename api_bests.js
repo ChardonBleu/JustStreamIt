@@ -59,7 +59,6 @@ function bestFilm(values) {
     detailsBestFilm(id_film);
 }
 
-
 /**
  * Principal requests searching for the 5 bests IMDb score films.
  * Promise's object is send to the function bestFilm.

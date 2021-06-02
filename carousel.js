@@ -1,6 +1,8 @@
 /*jslint es6*/
 /*global document window*/
 
+/* This file has in charge carousel display and navigation*/
+
 "use strict";
 
 /**
