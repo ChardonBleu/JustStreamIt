@@ -95,7 +95,7 @@ html *, body * {
   padding-left: 20px;
   font-size: 1.5rem;
   color: #fafdfe;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 .best__details__img {
   width: 20%;
@@ -104,15 +104,15 @@ html *, body * {
 }
 .best__details__button {
   text-align: center;
-  padding-top: 8px;
+  padding-top: 10px;
   width: 100px;
-  height: 30px;
+  height: 40px;
   border-radius: 5px;
   background-color: #1489b8;
   color: #1e272e;
   position: absolute;
-  right: 22%;
-  top: 25px;
+  left: 20px;
+  top: 90px;
 }
 .best__details__button:hover {
   background-color: #115a79;
@@ -142,6 +142,9 @@ html *, body * {
   }
   .best__details__text > div {
     font-size: 1.2rem;
+  }
+  .best__details__button {
+    top: 70px;
   }
 }
 html > .carousel, body > .carousel {
@@ -242,7 +245,7 @@ html > .carousel, body > .carousel {
 .modal__content > div h1 {
   color: #1489b8;
 }
-.modal__content > div p > mark {
+.modal__content > div mark {
   background-color: transparent;
   color: #b9cad8;
 }

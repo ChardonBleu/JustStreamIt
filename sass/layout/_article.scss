@@ -22,7 +22,7 @@
             padding-left: 20px;
             font-size: 1.5rem;
             color: $body-light;
-            padding-bottom: 20px;
+            padding-bottom: 40px;
             }
         }
         &__img {
@@ -32,15 +32,15 @@
         }        
         &__button{
             text-align: center;
-            padding-top: 8px;         
+            padding-top: 10px;         
             width: 100px;
-            height: 30px;
+            height: 40px;
             border-radius: 5px;
             background-color: $box-border;
             color: $box-bg;
             position:absolute;
-            right: 22%;
-            top: 25px;
+            left: 20px;
+            top: 90px;
             &:hover{
                 background-color: $text-hover;
                 color:$body-dark;
@@ -82,7 +82,10 @@
                 > div  {
                 font-size: 1.2rem;
                 }
-            }  
+            }
+            &__button{
+                top: 70px;
+            } 
         } 
     }
 }

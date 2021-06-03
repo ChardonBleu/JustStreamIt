@@ -8,10 +8,11 @@
  * @param  {Object} parent_document - design tags in witch paragraph have to be inserted
  * @param  {String} paragraph - contains integral string with <p> tags.
  */
-function newParagraph(parent_document, paragraph) {
+function newParagraph(parent_document, child, id_child, data) {
     'use-strict';
     const newElt = document.createElement("div");
-    parent_document.appendChild(newElt).innerHTML = paragraph;
+    parent_document.appendChild(newElt).innerHTML = child;
+    document.querySelector("#" + id_child).textContent = data;
 }
 
 /**
@@ -30,12 +31,12 @@ function detailsBestFilm(id_film) {
         .then(function (values) {
             const best_details = (document
                 .getElementsByClassName("best__details__text")[0]);
-            const title = values.title;
-            const title_html = "<h2><strong>" + title + "</strong></h2>";
-            newParagraph(best_details, title_html);
-            const resume = values.long_description;
-            const resume_html = "<p><strong>Résumé:</strong> " + resume + "</p>";
-            newParagraph(best_details, resume_html);
+
+            const title_html = "<h2 id='bestTitle'><strong></strong></h2>";
+            newParagraph(best_details, title_html, "bestTitle", values.title);
+
+            const resume_html = "<strong>Résumé: </strong><span id='resume'></span>";
+            newParagraph(best_details, resume_html, "resume", values.long_description);
         })
         .catch(function (error) {
             console.log(error);

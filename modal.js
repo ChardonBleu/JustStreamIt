@@ -86,10 +86,19 @@ function modalDetails(id) {
             const modalTextLong = document
                 .getElementsByClassName("modal__content__long")[0];
 
-            const modalTitle = "<h1>" + values.title + "</h1>";
+            const modalTitle = "<h1 id='modalTitle'></h1>";
+            newParagraph(modalTextCourt, modalTitle, "modalTitle", values.title);
 
-            const modalDate = "<p><mark>Release date:</mark> " +
-                values.date_published + "</p>";
+            const modalDuration = "<p><mark>Duration: </mark><span id='duration'></span> min<p>"
+            newParagraph(modalTextCourt, modalDuration, "duration", values.duration);
+
+            const modalDate = "<p><mark>Release date: </mark><span id='date'></span></p>";
+            newParagraph(modalTextCourt, modalDate, "date", values.date_published);
+
+            let stringCountries = "";
+            stringCountries = convertArrayString(values.countries);
+            const modalCountries = "<p><mark>Countries: </mark><span id='countries'</span></p>"
+            newParagraph(modalTextCourt, modalCountries, "countries", stringCountries.slice(0, stringCountries.length - 2));
 
             let rated = "";
             if (values.rated == "Not rated or unkown rating") {
@@ -101,14 +110,11 @@ function modalDetails(id) {
             } else {
                 rated = values.rated + " years +";
             }
+            const modalRated = "<p><mark>Rated: </mark><span id='rated'></span></p>";
+            newParagraph(modalTextCourt, modalRated, 'rated', rated);
 
-            const modalRated = "<p><mark>Rated: </mark>" +
-                rated + "</p>";
-
-            const modalImdb = "<p><mark>IMDb score: </mark>" +
-                values.imdb_score + "</p>";
-            const modalDuration = "<p><mark>Duration: </mark>" +
-                values.duration + " min</p>";
+            const modalImdb = "<p><mark>IMDb score: </mark><span id='imdb'></span></p>"
+            newParagraph(modalTextCourt, modalImdb, 'imdb', values.imdb_score);
 
             let boxOffice = "";
             if (values.worldwide_gross_income === null) {
@@ -116,43 +122,26 @@ function modalDetails(id) {
             } else {
                 boxOffice = new Intl.NumberFormat().format(values.worldwide_gross_income);
             };
-            const modalBoxOffice = "<p><mark>World box office: </mark>" +
-                boxOffice + "</p>";
-
-            const modalDescription = "<p><mark>Résumé: </mark>" +
-                values.long_description + "</p>";
+            const modalBoxOffice = "<p><mark>World box office: </mark><span id='box'></span></p>";
+            newParagraph(modalTextCourt, modalBoxOffice, 'box', boxOffice);
 
             let stringGenres = "";
             stringGenres = convertArrayString(values.genres);
-            const modalGenres = "<p><mark>Genres: </mark>" +
-                stringGenres.slice(0, stringGenres.length - 2) + "</p>";
+            const modalGenres = "<p><mark>Genres: </mark><span id='genres'></span></p>";
+            newParagraph(modalTextCourt, modalGenres, 'genres', stringGenres.slice(0, stringGenres.length - 2));
 
             let stringDirectors = "";
             stringDirectors = convertArrayString(values.directors);
-            const modalDirectors = "<p><mark>Director: </mark>" +
-                stringDirectors.slice(0, stringDirectors.length - 2) + "</p>";
+            const modalDirectors = "<p><mark>Director: </mark><span id='directors'></span></p>";
+            newParagraph(modalTextCourt, modalDirectors, "directors", stringDirectors.slice(0, stringDirectors.length - 2));
 
             let stringActors = "";
             stringActors = convertArrayString(values.actors);
-            const modalActors = "<p><mark>Actors: </mark>" +
-                stringActors.slice(0, stringActors.length - 2) + "</p>";
+            const modalActors = "<p><mark>Actors: </mark><span id='actors'></span></p>";
+            newParagraph(modalTextLong, modalActors, "actors", stringActors.slice(0, stringActors.length - 2));
 
-            let stringCountries = "";
-            stringCountries = convertArrayString(values.countries);
-            const modalCountries = "<p><mark>Countries: </mark>" +
-                stringCountries.slice(0, stringCountries.length - 2) + "</p>";
-
-            newParagraph(modalTextCourt, modalTitle);
-            newParagraph(modalTextCourt, modalDuration);
-            newParagraph(modalTextCourt, modalDate);
-            newParagraph(modalTextCourt, modalCountries);
-            newParagraph(modalTextCourt, modalRated);
-            newParagraph(modalTextCourt, modalImdb);
-            newParagraph(modalTextCourt, modalBoxOffice);
-            newParagraph(modalTextCourt, modalDirectors);
-            newParagraph(modalTextLong, modalActors);
-            newParagraph(modalTextLong, modalDescription);
-
+            const modalDescription = "<p><mark>Résumé: </mark><span id='modalResume'></span></p>";
+            newParagraph(modalTextLong, modalDescription, "modalResume", values.long_description);
         })
         .catch(function(error){
             console.log(error);
