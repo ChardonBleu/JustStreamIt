@@ -67,7 +67,7 @@
 }
 
 
-@media only screen and (max-width:1700px){
+@media all and (max-width:1700px) {
   .modal {
     &__content {
       width: 80%; 
@@ -75,7 +75,7 @@
   }
 }
 
-@media only screen and (max-width:1024px){
+@media all and (max-width:1024px) {
   .modal {
     &__content {
       width: 90%;
@@ -83,6 +83,35 @@
         font-size: 1.3em; 
       }
       }
+  }
+}
+
+@media all and (max-width:600px) {
+  .modal {
+    &__close {
+        top: 5px;
+        right: 10px;
+        font-size: 40px;
+    }
+    &__content {
+      width: 95%;
+      > div {
+        padding-left: 10px;
+        font-size: 0.8em;    
+      }
+      &__court {    
+        &__text {
+          > div h1,p {
+            margin-bottom: 5px;
+            margin-top: 5px;
+          }           
+        }
+        &__img img {
+          height: 180px;
+          padding-right: 5px;
+        }
+      }
+    }
   }
 }
 

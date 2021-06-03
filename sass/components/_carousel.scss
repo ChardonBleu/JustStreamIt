@@ -52,3 +52,20 @@ html > .carousel, body > .carousel {
         }
     }
 }
+
+@media all and (max-width:600px) {
+    .carousel {
+        margin-bottom: 10px;
+        > p {
+            font-size: 1em;
+        }
+        &__nav {  
+            display:flex;
+            justify-content: center;
+            &__prev h1, &__next h1 {
+                width: 150px;
+                font-size: 50px;
+            }
+        }
+    }
+}

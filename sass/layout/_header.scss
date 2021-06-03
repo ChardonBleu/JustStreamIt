@@ -59,3 +59,17 @@
         }
     }
 }
+
+@media all and (max-width: 500px) {
+    .header {
+        &__title {
+            font-size: 1.5em;
+        }
+        &__nav {
+            padding-right: 20px;
+            &__link {
+                font-size: 1.1em;
+            }
+        }
+    }
+}

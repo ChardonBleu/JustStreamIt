@@ -31,11 +31,20 @@ function activeSlide(carousel) {
      * window.innerWidth * 70%
      */
     function resize() {
-        if (window.innerWidth >= 1024) {
+        if (window.innerWidth >= 900) {
             numberVisibleBoxes = 4;
-        } else {
+            margin = 30;
+        } else if (window.innerWidth >= 600 && window.innerWidth <= 900) {
             numberVisibleBoxes = 2;
+            margin = 30;
+        } else if (window.innerWidth <= 600 && window.innerWidth >= 350) {
+            numberVisibleBoxes = 2;
+            margin = 0;
+        } else if (window.innerWidth <= 350 && window.innerWidth >= 50){
+            numberVisibleBoxes = 1;
+            margin = 0;
         }
+
 
         widthBox = (window.innerWidth * 0.7 - (numberVisibleBoxes - 1) *
                         margin) / numberVisibleBoxes;

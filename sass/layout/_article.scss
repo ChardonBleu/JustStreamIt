@@ -11,6 +11,7 @@
     > h1 {
         font-size: 2em;
         color: $box-border;
+
     }  
     &__details {
         position:relative;
@@ -89,3 +90,45 @@
         } 
     }
 }
+
+@media all and (max-width:600px) {
+    .best {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 25px;
+        > h1 {
+            text-align: center;
+            margin-bottom: 0px;
+            font-size: 0.8em;
+        }  
+        &__details {
+            &__text {
+                padding-bottom: 0px;
+                > div  {
+                    padding-left: 15px;
+                    font-size: 0.8em;
+                    padding-bottom: 5px;
+                    > h2 {
+                    margin-bottom: 50px;
+                    font-size: 1.2em;
+                    }
+                }                
+            }
+            &__img {
+                width: 20%;
+                min-width: 91px;
+                max-height: 134px;
+                padding-top: 10px;
+            }
+            &__button{
+                padding-top: 5px;         
+                width: 90px;
+                height: 30px;
+                font-size: 0.9em;
+                left: 15px;
+                top: 40px;
+            }         
+        }
+    }
+}
+

@@ -70,6 +70,17 @@ html *, body * {
     font-size: 1.5em;
   }
 }
+@media all and (max-width: 500px) {
+  .header__title {
+    font-size: 1.5em;
+  }
+  .header__nav {
+    padding-right: 20px;
+  }
+  .header__nav__link {
+    font-size: 1.1em;
+  }
+}
 .best {
   display: flex;
   flex-direction: column;
@@ -147,6 +158,44 @@ html *, body * {
     top: 70px;
   }
 }
+@media all and (max-width: 600px) {
+  .best {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .best > h1 {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+  }
+  .best__details__text {
+    padding-bottom: 0px;
+  }
+  .best__details__text > div {
+    padding-left: 15px;
+    font-size: 0.8em;
+    padding-bottom: 5px;
+  }
+  .best__details__text > div > h2 {
+    margin-bottom: 50px;
+    font-size: 1.2em;
+  }
+  .best__details__img {
+    width: 20%;
+    min-width: 91px;
+    max-height: 134px;
+    padding-top: 10px;
+  }
+  .best__details__button {
+    padding-top: 5px;
+    width: 90px;
+    height: 30px;
+    font-size: 0.9em;
+    left: 15px;
+    top: 40px;
+  }
+}
 html > .carousel, body > .carousel {
   padding-top: 0px;
 }
@@ -202,6 +251,22 @@ html > .carousel, body > .carousel {
   margin: auto;
 }
 
+@media all and (max-width: 600px) {
+  .carousel {
+    margin-bottom: 10px;
+  }
+  .carousel > p {
+    font-size: 1em;
+  }
+  .carousel__nav {
+    display: flex;
+    justify-content: center;
+  }
+  .carousel__nav__prev h1, .carousel__nav__next h1 {
+    width: 150px;
+    font-size: 50px;
+  }
+}
 .modal {
   display: none;
   position: fixed;
@@ -273,17 +338,39 @@ html > .carousel, body > .carousel {
     transform: scale(1);
   }
 }
-@media only screen and (max-width: 1700px) {
+@media all and (max-width: 1700px) {
   .modal__content {
     width: 80%;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
   .modal__content {
     width: 90%;
   }
   .modal__content > div {
     font-size: 1.3em;
+  }
+}
+@media all and (max-width: 600px) {
+  .modal__close {
+    top: 5px;
+    right: 10px;
+    font-size: 40px;
+  }
+  .modal__content {
+    width: 95%;
+  }
+  .modal__content > div {
+    padding-left: 10px;
+    font-size: 0.8em;
+  }
+  .modal__content__court__text > div h1, .modal__content__court__text p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .modal__content__court__img img {
+    height: 180px;
+    padding-right: 5px;
   }
 }
 
