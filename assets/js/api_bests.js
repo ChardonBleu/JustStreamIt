@@ -32,7 +32,7 @@ function detailsBestFilm(id_film) {
             const best_details = (document
                 .getElementsByClassName("best__details__text")[0]);
 
-            const title_html = "<h2 id='bestTitle'><strong></strong></h2>";
+            const title_html = "<h2 id='bestTitle'></h2>";
             newParagraph(best_details, title_html, "bestTitle", values.title);
 
             const resume_html = "<strong>Résumé: </strong><span id='resume'></span>";

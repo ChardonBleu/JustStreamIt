@@ -40,7 +40,7 @@ function activeSlide(carousel) {
         } else if (window.innerWidth <= 600 && window.innerWidth >= 350) {
             numberVisibleBoxes = 2;
             margin = 0;
-        } else if (window.innerWidth <= 350 && window.innerWidth >= 50){
+        } else if (window.innerWidth <= 350){
             numberVisibleBoxes = 1;
             margin = 0;
         }
